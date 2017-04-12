@@ -1,20 +1,22 @@
+package techgig;
+
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 public class CandidateCode {
-public static int GetJumpCount(int INPUT1,int INPUT2,int[] input3)
+public static int GetJumpCount(int input1,int input2,int[] input3)
     {
 	    int tn=0,n;
         for(int i=0; i<input3.length; i++) {
-            if(input3[i]<=INPUT1) {
+            if(input3[i]<=input1) {
                 tn+=1;
                 continue;
             }
 
-            n=((input3[i]-INPUT1)/(INPUT1-INPUT2));
-            n+=input3[i]-((INPUT1-INPUT2)*n)==INPUT1?1:2;
+            n=((input3[i]-input1)/(input1-input2));
+            n+=input3[i]-((input1-input2)*n)==input1?1:2;
             tn+=n;
         }
       return tn;
